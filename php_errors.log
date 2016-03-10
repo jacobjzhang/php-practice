@@ -82,3 +82,19 @@
 [09-Mar-2016 02:47:05 UTC] PHP Stack trace:
 [09-Mar-2016 02:47:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/shoutit/index.php:0
 [09-Mar-2016 02:47:05 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/shoutit/index.php:22
+[10-Mar-2016 22:33:15 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1049): Unknown database 'quizszer' in /home/ubuntu/workspace/quizzer/database.php on line 9
+[10-Mar-2016 22:33:15 UTC] PHP Stack trace:
+[10-Mar-2016 22:33:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/quizzer/index.php:0
+[10-Mar-2016 22:33:15 UTC] PHP   2. include() /home/ubuntu/workspace/quizzer/index.php:1
+[10-Mar-2016 22:33:15 UTC] PHP   3. mysqli->mysqli() /home/ubuntu/workspace/quizzer/database.php:9
+[10-Mar-2016 22:33:45 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1049): Unknown database 'quizdzer' in /home/ubuntu/workspace/quizzer/database.php on line 9
+[10-Mar-2016 22:33:45 UTC] PHP Stack trace:
+[10-Mar-2016 22:33:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/quizzer/index.php:0
+[10-Mar-2016 22:33:45 UTC] PHP   2. include() /home/ubuntu/workspace/quizzer/index.php:1
+[10-Mar-2016 22:33:45 UTC] PHP   3. mysqli->mysqli() /home/ubuntu/workspace/quizzer/database.php:9
+[10-Mar-2016 22:34:05 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1049): Unknown database 'quizdzer' in /home/ubuntu/workspace/quizzer/database.php on line 9
+[10-Mar-2016 22:34:05 UTC] PHP Stack trace:
+[10-Mar-2016 22:34:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/quizzer/index.php:0
+[10-Mar-2016 22:34:05 UTC] PHP   2. include() /home/ubuntu/workspace/quizzer/index.php:1
+[10-Mar-2016 22:34:05 UTC] PHP   3. mysqli->mysqli() /home/ubuntu/workspace/quizzer/database.php:9
+[10-Mar-2016 22:59:51 UTC] PHP Parse error:  syntax error, unexpected 've' (T_STRING), expecting ',' or ';' in /home/ubuntu/workspace/quizzer/process.php on line 10

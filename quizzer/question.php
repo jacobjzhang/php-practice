@@ -32,44 +32,46 @@
     // Get result
     $choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
     
+    $choices_count = count($choices->fetch_assoc());
+    
 ?>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>PHP Quizzer</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-</head>
-<body>
-    
-    <header>
+
+  <?php include 'partials/header.php'; ?>
+      
+    <div class="jumbotron">
         <div class="container">
-            <h1>PHP Quizzer</h1>
+          <h2><?php echo $question['text'] ?></h2>
         </div>
-    </header>
-    
+    </div>
+
     <main>
-        <div class="container">
-            <div class="current">Question <?php echo $question['question_number']; ?> of <?php echo $total; ?></div>
-            <p class="question">
-                <?php echo $question['text'] ?>
-            </p>
-            <form method="post" action="process.php">
-                <ul class="choices">
-                    <?php while ($row = $choices->fetch_assoc()) : ?>
-                        <li><input name="choice" type="radio" value="<?php echo $row['id']; ?>" /><?php echo $row['text']; ?></li>
-                    <?php endwhile; ?>
+        <div class="container text-center">
+            <div class="current">
+                Question <?php echo $question['question_number']; ?> of <?php echo $total; ?>
+            </div>
+            <form method="post" action="process.php" id="questionform">
+                <div class="row">
+                <ul id="sti-menu" class="sti-menu choices">
+                    <!-- Set the array of choices, each choice being a $value -->
+                    <?php foreach ($choices as $key=>$value): ?>
+                    <!--<span class="hsjs"></span>-->
+                        <a class="col-md-<?php echo 12/$choices_count; ?> choice-block" href="#" value="<?php echo $value['id']; ?>">
+                            <i class="fa fa-2x fa<?php if ($value['id']<= 4) {echo $value['id'];} else { echo $value['id'] % $choices_count; } ?>"></i>
+                            <h3 data-type="mText" class="sti-item text-center">
+                      				Choice <?php echo $value['id']; ?>
+                      			</h3>
+                      			<h4 data-type="sText" class="sti-item text-center">
+                      				<?php echo $value['text']; ?>
+                      			</h4>
+                      			<span data-type="icon" class="text-center sti-icon sti-icon-<?php echo $value['id']; ?> sti-item">
+                      			</span>
+                        </a>
+                    <?php endforeach; ?>
                 </ul>
-                <input type="submit" value="Submit" />
+                </div>
                 <input type="hidden" name="number" value="<?php echo $number; ?>" />
             </form>
         </div>
     </main>
     
-    <footer>
-        <div class="container">
-            Copyright 2016 Jacob J. Zhang
-        </div>    
-    </footer>
-    
-</body>
-</html>
+<?php include 'partials/footer.php'; ?>

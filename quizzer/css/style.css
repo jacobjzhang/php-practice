@@ -1,57 +1,76 @@
-body {
-    font-family: Arial;
-    font-size: 15px;
-    line-height: 1.6em;
+.navbar {
+    background-color: #02918C;
+    margin-bottom: 0px;
+    border: none !important;
 }
 
-li {
-    list-style: none;
+.navbar a {
+    color: #fff !important;
 }
 
-a {
-    text-decoration: none;
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #CFC91D !important;
+    background-color: #02918C;
 }
 
-label {
+h1, h2 {
+    font-size: 46px;
+    color: #02918c;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.jumbotron {
+    background-image: url('../images/quizzer_bg.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+.jumbotron h2 {
+    color: #fff;
+    background-color: #CFC91D;
+    padding: 25px;
+    font-size: 40px;
     display: inline-block;
-    width: 180px;
 }
 
-input[type='text'] {
-    width: 97%;
-    padding: 4px;
-    border-radius: 5px;
-    border: 1px solid #000;
+ul.choices {
+    margin: 50px 0 50px 0;
 }
 
-.container {
-    width: 60%;
-    margin: 0 auto;
+#sti-menu h3 {
+    font-size: 12px;
+}
+
+#sti-menu h4 {
+    font-size: 16px;
+}
+
+.choice-block {
+    display: block;
+    padding: 50px;
+    min-height: 220px;
     overflow: auto;
 }
 
-@media screen and (max-width: 600px) {
-    .container { width: 80%; }
+.choice-block:hover {
+    background-color: #FF0000;
+    color: #ffffff;
+    text-decoration: none;
 }
 
-
-header {
-    border-bottom: 3px #f4f4f4 solid;
+.choice-block + .choice-block {
+    border-left: 1px solid #d9dbdb;
 }
 
-footer {
-    border-top: 3px #f4f4f4 solid;
-}
+.fa0:before {content: "\f1ea";}
+.fa1:before {content: "\f1dc";}
+.fa2:before {content: "\f1e9";}
+.fa3:before {content: "\f1a8";}
+.fa4:before {content: "\f295";}
 
-main {
-    padding-bottom: 20px;
+.footer {
+    margin-bottom: 50px;
 }
-
-a.start {
-    display: inline-block;
-    color: #666;
-    background: #f4f4f4;
-    border: 1px dotted #ccc;
-    padding: 6px 13px;
-}
-
